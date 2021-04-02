@@ -1,32 +1,36 @@
 fn main() {
 
+    let result = nth(55);
 
-    let number = 13;
-    let  mut counter = 1;
+    println! ("result: {}", result);
 
+}
 
-    for divider1 in 2..number {
+pub fn nth(n: u32) -> u32 {
+
+    let mut counter = 0;
+
+    for divider1 in 2..n + 1 {
 
 
         for divider2 in 2..divider1{
 
             let resto = divider1 % divider2;
 
-            
             if resto == 0 {
                 break
             }
             else {
-                println! ("{} % {} = {}", divider1, divider2, resto);
-                if divider2 == divider1 + 1 {
-                    counter += 1
+
+                if divider2 == divider1 - 1 {
+                    counter += 1;
                 }
             }
 
         }
 
     }
-    println! ("numeros primos hasta el number: {}", counter);
-
-
+    println! ("counter: {}", counter);
+    counter
 }
+
