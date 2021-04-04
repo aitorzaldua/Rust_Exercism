@@ -1,6 +1,6 @@
 fn main() {
 
-    let result = nth(55);
+    let result = nth(5);
 
     println! ("result: {}", result);
 
@@ -10,27 +10,31 @@ pub fn nth(n: u32) -> u32 {
 
     let mut counter = 0;
 
-    for divider1 in 2..n + 1 {
+    let prime_number = 0;
 
 
-        for divider2 in 2..divider1{
+    for divider1 in 2..2147483647 {
 
-            let resto = divider1 % divider2;
 
-            if resto == 0 {
+        for divider2 in 2..divider1 {
+
+            println! ("{}, {}, {}", divider1, divider2, counter);
+
+            if divider1 % divider2 == 0 {
                 break
             }
-            else {
-
-                if divider2 == divider1 - 1 {
-                    counter += 1;
+            else if divider2 == divider1 - 1 {
+                counter += 1;
+                if counter == n {
+                    prime_number == divider1;
+                    break
                 }
             }
 
         }
 
     }
-    println! ("counter: {}", counter);
-    counter
+
+    prime_number
 }
 
