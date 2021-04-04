@@ -1,36 +1,20 @@
 fn main() {
 
-    let result = nth(55);
+    let if_prime = 15;
 
-    println! ("result: {}", result);
+    for divider1 in 2..if_prime {
 
-}
+        let mut counter = 0;
 
-pub fn nth(n: u32) -> u32 {
+        let resto = if_prime % divider1;
 
-    let mut counter = 0;
+        println! ("{} % {} = {}",if_prime, divider1, resto);
 
-    for divider1 in 2..n + 1 {
-
-
-        for divider2 in 2..divider1{
-
-            let resto = divider1 % divider2;
-
-            if resto == 0 {
-                break
-            }
-            else {
-
-                if divider2 == divider1 - 1 {
-                    counter += 1;
-                }
-            }
-
+        match resto {
+            0 => counter +=1,
+            _ => println!("primo"),
         }
 
     }
-    println! ("counter: {}", counter);
-    counter
-}
 
+}
