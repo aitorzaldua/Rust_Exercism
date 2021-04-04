@@ -26,3 +26,20 @@ pub fn nth(n:u32) -> u32 {
     counter
 }
 
+fn main() {
+
+    let if_prime = 12;
+
+    for divider1 in 2..if_prime + 1 {
+
+        let resto = if_prime % divider1;
+
+        if resto == 0 {
+            println! ("no es primo");
+        }
+        else {
+            println! ("no es primo");
+        }
+    }
+
+}
