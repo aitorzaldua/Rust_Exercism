@@ -1,15 +1,16 @@
 pub fn nth(n: u32) -> u32 {
 
-    println! ("n: {}", n);
 
     let mut counter = 0;
+    let mut prime = 0;
 
-    for divider1 in 2..n + 1 {
+    for divider1 in 2..2147483647 {
 
 
         for divider2 in 2..divider1{
 
             let resto = divider1 % divider2;
+
 
             if resto == 0 {
                 break
@@ -22,9 +23,15 @@ pub fn nth(n: u32) -> u32 {
             }
 
         }
+        if counter == n {
+            prime = divider1;
+            println! ("fin de ciclo");
+            break
+        }
 
     }
 
-    println! ("counter: {}", counter);
-    counter
+
+    prime
+
 }
