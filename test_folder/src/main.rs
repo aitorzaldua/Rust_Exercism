@@ -1,41 +1,21 @@
 fn main() {
 
-    let n = 5;
-    let mut counter = 0;
-    let mut prime = 0;
+    for number in (1..100).rev() {
 
-    for divider1 in 2..2147483647 {
+        let number2 = number -1;
 
+        println!("{} bottles of beer on the wall, {} bottles of beer.", number, number);
 
-        for divider2 in 2..divider1{
-
-            let resto = divider1 % divider2;
-
-            println! ("{} % {} = {}", divider1, divider2, resto);
-
-            if resto == 0 {
-                break
-            }
-            else {
-
-                if divider2 == divider1 - 1 {
-                    counter += 1;
-                }
-            }
-
-            println! ("counter: {}", counter);
-
+        if number2 > 0 {
+            println!("Take one down and pass it around, {} bottles of beer on the wall.", number2);
         }
-        if counter == n {
-            prime = divider1;
-            println! ("fin de ciclo");
-            break
+        else {
+            println!("Take one down and pass it around, no more bottles of beer on the wall.");
         }
 
     }
 
-
-    println! ("fuera del ciclo for, {}", prime);
+    println! ("No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.");
 
 }
 
