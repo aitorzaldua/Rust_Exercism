@@ -32,7 +32,7 @@ for n in (end..start + 1).rev() {
                 all_part
 
             }
-            _ => {
+            _ => { 
                 let number = n -1;
 
                 let string_n : String = n.to_string();

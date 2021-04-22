@@ -1,0 +1,13 @@
+fn main() {
+
+    counter (5, 8);
+}
+
+fn counter (start: u32, end: u32) {
+
+    for n in start..=end{
+        println! ("{}", n);
+    }
+
+
+}
