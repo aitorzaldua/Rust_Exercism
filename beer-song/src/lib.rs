@@ -58,8 +58,7 @@ pub fn verse(n: u32) -> String {
 
 pub fn sing(start: u32, end: u32) -> String {
 
-    let first_part = String::from(" bottles of beer on the wall, ");
-    first_part
+    (end..start+1).rev().map(|x| verse(x)).collect::<Vec<String>>().join("\n")
 
 }
 
